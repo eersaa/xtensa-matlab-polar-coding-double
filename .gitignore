@@ -1,0 +1,36 @@
+# Build directories
+bin/
+build/
+Debug/
+Release/
+
+# Eclipse-specific files
+.project
+.cproject
+.settings/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Compiled object files
+*.o
+*.obj
+
+# Log files
+*.log
+
+# Other IDE-specific files
+.idea/
+*.iml
+
+# Version control directories
+.git/
+.svn/
+
+# Xtensa specific
+.xxproject
+
+# Other
+Makefile
