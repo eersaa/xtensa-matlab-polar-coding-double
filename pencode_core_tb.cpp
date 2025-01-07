@@ -1,4 +1,5 @@
 #include "pencode_core.h"
+#include "defs.h"
 
 #include <iostream>
 #include <fstream>
@@ -10,15 +11,15 @@ void print_outputs(int i, bool data_out, bool data_ref)
 
 int main(int argc, char *argv[])
 {
-    bool data_in[block_length] = {
+    double data_in[block_length] = {
     		#include "input.txt"
     		};
-    bool data_out[block_length];
-    bool data_ref[block_length] = {
+    double data_out[block_length];
+    double data_ref[block_length] = {
     		#include "reference_output.txt"
     		};
 
-    run(data_in, data_out);
+    pencode_core(data_in, data_out);
 
     bool mismatch = false;
     for (int i = 0; i < block_length; i++)
